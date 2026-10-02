@@ -325,7 +325,9 @@ if(state.error!=null){
 
                 Button(onClick = {/* accion futura*/
                     vm.submit { user ->
-                        navController.navigate("muestraDatos/$user")
+                        //navController.navigate("muestraDatos/$user")
+                        navController.navigate("DrawerMenu/$user")
+
                         {
                             popUpTo("login") { inclusive = true } // no volver al login
                             launchSingleTop = true

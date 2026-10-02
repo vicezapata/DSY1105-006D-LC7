@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.dsy1105_006d_lc7.ui.home.MuestraDatosScreen
 import com.example.dsy1105_006d_lc7.ui.login.HomeScreen
+import com.example.dsy1105_006d_lc7.view.DrawerMenu
 
 @Composable
 fun AppNav(){
@@ -18,7 +19,8 @@ fun AppNav(){
         }// fin composable
 
         composable(
-            route = "muestraDatos/{username}",
+          //  route = "muestraDatos/{username}",
+            route = "DrawerMenu/{username}",
             arguments = listOf(
                 navArgument("username") {
                     type = NavType.StringType
@@ -30,8 +32,8 @@ fun AppNav(){
         { //inicio back
                 backStackEntry ->
             val username = backStackEntry.arguments?.getString("username").orEmpty()
-            MuestraDatosScreen(username = username, navController = navController)
-
+          //  MuestraDatosScreen(username = username, navController = navController)
+            DrawerMenu(username = username, navController = navController)
         }// termino back
 
     }// Fin Nav

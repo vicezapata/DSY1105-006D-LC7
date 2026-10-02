@@ -54,6 +54,10 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.7.7")
 
+    //dependencias para librerias iconos
+
+    implementation("androidx.compose.material:material-icons-core")
+    implementation("androidx.compose.material:material-icons-extended")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
